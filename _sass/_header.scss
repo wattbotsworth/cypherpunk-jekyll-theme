@@ -1,0 +1,111 @@
+.site-header {
+  background: $bg-primary;
+  border-bottom: 1px solid $border-green;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: $nav-width;
+  margin: 0 auto;
+  padding: 0 $spacing;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+
+.site-title {
+  color: $accent-green;
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px $glow-green;
+  white-space: nowrap;
+
+  &:hover {
+    text-shadow: 0 0 15px $glow-green, 0 0 25px $glow-green;
+  }
+
+  &::before {
+    content: "> ";
+    opacity: 0.6;
+  }
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+
+.nav-links a {
+  display: block;
+  padding: 0.5em 1em;
+  color: $text-muted;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+
+  &:hover,
+  &.active {
+    color: $accent-green;
+    text-shadow: 0 0 8px $glow-green;
+  }
+}
+
+// Mobile hamburger
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid $border-green;
+  color: $accent-green;
+  font-family: $font-mono;
+  font-size: 1.2em;
+  padding: 4px 10px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    background: $bg-primary;
+    border-bottom: 1px solid $border-green;
+    flex-direction: column;
+    padding: 0.5em 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 0.8em $spacing;
+    border-bottom: 1px solid rgba(0, 255, 65, 0.1);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

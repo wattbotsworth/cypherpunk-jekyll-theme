@@ -1,0 +1,11 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      {% if site.github_username %}<a href="https://github.com/{{ site.github_username }}">GitHub</a>{% endif %}
+      {% if site.data.social.rss %}<a href="{{ '/feed.xml' | relative_url }}">RSS</a>{% endif %}
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </div>
+    <p class="footer-prompt">echo "{{ site.description | truncate: 80 }}"</p>
+    <p class="footer-copy">&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+  </div>
+</footer>

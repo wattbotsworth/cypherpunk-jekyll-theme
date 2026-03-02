@@ -1,0 +1,15 @@
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 $spacing;
+}
+
+.content {
+  flex: 1;
+}

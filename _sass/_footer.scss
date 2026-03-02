@@ -1,0 +1,44 @@
+.site-footer {
+  border-top: 1px solid $border-green;
+  padding: 2em 0;
+  text-align: center;
+  font-size: 0.8em;
+  color: $text-muted;
+}
+
+.footer-inner {
+  max-width: $nav-width;
+  margin: 0 auto;
+  padding: 0 $spacing;
+}
+
+.footer-prompt {
+  color: $accent-green-dark;
+  margin-bottom: 0.5em;
+
+  &::before {
+    content: "root@757btc:~$ ";
+    color: $accent-green;
+  }
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  margin-bottom: 1em;
+  flex-wrap: wrap;
+
+  a {
+    color: $text-muted;
+    font-size: 0.95em;
+
+    &:hover {
+      color: $accent-green;
+    }
+  }
+}
+
+.footer-copy {
+  color: #555555; // muted footer copy
+}

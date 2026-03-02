@@ -1,0 +1,34 @@
+<div class="hero-container">
+  <img src="{{ '/assets/img/cypherpunk_mermaid.jpeg' | relative_url }}" alt="757btc Cypherpunk" class="hero-image">
+
+  <div class="bitcoin-hud-overlay">
+    <div class="hud-corner-bracket top-left"></div>
+    <div class="hud-corner-bracket top-right"></div>
+    <div class="hud-corner-bracket bottom-left"></div>
+    <div class="hud-corner-bracket bottom-right"></div>
+
+    <div class="hud-grid-overlay"></div>
+    <div class="hud-scan-line"></div>
+
+    <div class="hud-stats-corner" id="hud-stats">
+      <span class="hud-stats-label">[ LIVE NETWORK DATA ]</span>
+      <div class="hud-stat-row">
+        <span class="hud-stat-label">Block</span>
+        <span class="hud-stat-value" id="hud-block">---</span>
+      </div>
+      <div class="hud-stat-row">
+        <span class="hud-stat-label">Price</span>
+        <span class="hud-stat-value" id="hud-price">---</span>
+      </div>
+      <div class="hud-stat-row">
+        <span class="hud-stat-label">Fees</span>
+        <span class="hud-stat-value" id="hud-fees">---</span>
+      </div>
+    </div>
+
+    <div class="hud-status-bar">
+      <span class="hud-prompt" id="hud-status">system online</span>
+      <span class="hud-timestamp" id="hud-time"></span>
+    </div>
+  </div>
+</div>

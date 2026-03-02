@@ -1,0 +1,165 @@
+// Post listing on homepage
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 2em 0;
+}
+
+.post-item {
+  border-left: 3px solid $border-green;
+  padding: 1em 1.2em;
+  margin-bottom: 1.5em;
+  background: $bg-secondary;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    border-left-color: $accent-green;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.1);
+  }
+}
+
+.post-meta {
+  font-size: 0.8em;
+  color: $text-muted;
+  margin-bottom: 0.4em;
+
+  .post-date::before {
+    content: "[ ";
+    color: $accent-green-dark;
+  }
+
+  .post-date::after {
+    content: " ]";
+    color: $accent-green-dark;
+  }
+}
+
+.post-title-link {
+  font-size: 1.15em;
+  font-weight: bold;
+  color: $accent-green;
+  display: block;
+  margin-bottom: 0.4em;
+
+  &:hover {
+    text-shadow: 0 0 10px $glow-green;
+  }
+
+  &::before {
+    content: "> ";
+    opacity: 0.5;
+  }
+}
+
+.post-excerpt {
+  color: $text-muted;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+// Single post page
+.post-header {
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid $border-green;
+}
+
+.post-header .post-title {
+  font-size: 1.5em;
+  margin: 0 0 0.3em;
+}
+
+.post-author {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-top: 0.8em;
+}
+
+.post-author-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid $border-green;
+}
+
+.post-author-name {
+  color: $accent-green-dim;
+  font-size: 0.85em;
+
+  a {
+    color: $accent-green-dim;
+
+    &:hover {
+      color: $accent-green;
+    }
+  }
+}
+
+.post-content {
+  margin-bottom: 3em;
+
+  // Ensure google maps iframes are responsive
+  iframe {
+    max-width: 100%;
+    margin: 1em 0;
+  }
+
+  strong {
+    color: $text-primary;
+  }
+}
+
+// Post navigation
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  padding-top: 1.5em;
+  border-top: 1px solid $border-green;
+  font-size: 0.85em;
+}
+
+.post-nav a {
+  color: $text-muted;
+  max-width: 45%;
+
+  &:hover {
+    color: $accent-green;
+  }
+}
+
+.post-nav .prev::before {
+  content: "<< ";
+  color: $accent-green-dark;
+}
+
+.post-nav .next::after {
+  content: " >>";
+  color: $accent-green-dark;
+}
+
+// Pagination
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin: 2em 0;
+  font-size: 0.9em;
+}
+
+.pagination a {
+  color: $accent-green;
+  padding: 0.4em 0.8em;
+  border: 1px solid $border-green;
+
+  &:hover {
+    background: rgba(0, 255, 65, 0.1);
+    text-shadow: 0 0 8px $glow-green;
+  }
+}
+
+.pagination .current {
+  color: $text-muted;
+}
