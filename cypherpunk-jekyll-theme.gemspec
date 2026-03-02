@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.version       = "0.1.0"
   spec.authors       = ["757btc"]
   spec.summary       = "A cypherpunk terminal theme for Jekyll — CRT scan lines, Bitcoin HUD, green phosphor aesthetic."
-  spec.homepage      = "https://github.com/757btc/cypherpunk-jekyll-theme"
+  spec.homepage      = "https://github.com/wattbotsworth/cypherpunk-jekyll-theme"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f|

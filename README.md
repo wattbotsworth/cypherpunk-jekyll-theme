@@ -22,7 +22,7 @@ Built for [757btc.org](https://757btc.org).
 In your `_config.yml`:
 
 ```yaml
-remote_theme: 757btc/cypherpunk-jekyll-theme
+remote_theme: wattbotsworth/cypherpunk-jekyll-theme
 ```
 
 ### As a gem theme
@@ -30,7 +30,7 @@ remote_theme: 757btc/cypherpunk-jekyll-theme
 Add to your `Gemfile`:
 
 ```ruby
-gem "cypherpunk-jekyll-theme", github: "757btc/cypherpunk-jekyll-theme"
+gem "cypherpunk-jekyll-theme", github: "wattbotsworth/cypherpunk-jekyll-theme"
 ```
 
 In your `_config.yml`:
