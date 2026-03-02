@@ -1,5 +1,7 @@
 <div class="hero-container">
-  <img src="{{ site.header_feature_image | default: '/assets/img/cypherpunk_mermaid.jpeg' | relative_url }}" alt="{{ site.title | default: 'Cypherpunk' }}" class="hero-image">
+  {% if site.header_feature_image %}
+  <img src="{{ site.header_feature_image | relative_url }}" alt="{{ site.title }}" class="hero-image">
+  {% endif %}
 
   <div class="bitcoin-hud-overlay">
     <div class="hud-corner-bracket top-left"></div>
