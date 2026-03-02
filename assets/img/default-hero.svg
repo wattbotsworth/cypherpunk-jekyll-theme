@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,255,65,0.06)" stroke-width="0.5"/>
+    </pattern>
+    <radialGradient id="glow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="rgba(0,255,65,0.08)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+    </radialGradient>
+    <linearGradient id="scanfade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(0,255,65,0)"/>
+      <stop offset="45%" stop-color="rgba(0,255,65,0.15)"/>
+      <stop offset="50%" stop-color="rgba(0,255,65,0.4)"/>
+      <stop offset="55%" stop-color="rgba(0,255,65,0.15)"/>
+      <stop offset="100%" stop-color="rgba(0,255,65,0)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="600" fill="#0a0a0a"/>
+
+  <!-- Grid -->
+  <rect width="1200" height="600" fill="url(#grid)"/>
+
+  <!-- Center glow -->
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <!-- Decorative terminal text -->
+  <text font-family="monospace" font-size="11" fill="rgba(0,255,65,0.12)">
+    <tspan x="60" y="60">#!/usr/bin/env freedom</tspan>
+    <tspan x="60" y="80">import sovereignty</tspan>
+    <tspan x="60" y="100">from privacy import encryption as right</tspan>
+    <tspan x="60" y="120">from decentralization import bitcoin</tspan>
+    <tspan x="60" y="160">class CypherpunkNode:</tspan>
+    <tspan x="60" y="180">    def __init__(self):</tspan>
+    <tspan x="60" y="200">        self.keys = generate_keypair()</tspan>
+    <tspan x="60" y="220">        self.identity = self.keys.public</tspan>
+    <tspan x="60" y="240">        self.privacy = True</tspan>
+    <tspan x="60" y="280">    def verify(self, message):</tspan>
+    <tspan x="60" y="300">        return sign(message, self.keys.private)</tspan>
+    <tspan x="60" y="340">    def broadcast(self, signal):</tspan>
+    <tspan x="60" y="360">        for peer in self.network:</tspan>
+    <tspan x="60" y="380">            peer.relay(encrypt(signal))</tspan>
+  </text>
+
+  <text font-family="monospace" font-size="11" fill="rgba(0,255,65,0.08)">
+    <tspan x="700" y="100">-----BEGIN PGP PUBLIC KEY BLOCK-----</tspan>
+    <tspan x="700" y="120">mQENBGV4x3ABCAK3j8Lm...</tspan>
+    <tspan x="700" y="140">xR7vKm4pT9fNzKL+wQMB...</tspan>
+    <tspan x="700" y="160">kP5gDwC3AQ0EZXjHcAEI...</tspan>
+    <tspan x="700" y="180">-----END PGP PUBLIC KEY BLOCK-----</tspan>
+    <tspan x="700" y="220">$ echo "privacy is necessary" | sha256sum</tspan>
+    <tspan x="700" y="240">a1b2c3d4e5f6...</tspan>
+    <tspan x="700" y="280">$ bitcoin-cli getblockchaininfo</tspan>
+    <tspan x="700" y="300">{</tspan>
+    <tspan x="700" y="320">  "chain": "main",</tspan>
+    <tspan x="700" y="340">  "blocks": 938989,</tspan>
+    <tspan x="700" y="360">  "verificationprogress": 1.0,</tspan>
+    <tspan x="700" y="380">  "pruned": false</tspan>
+    <tspan x="700" y="400">}</tspan>
+  </text>
+
+  <!-- Subtle horizontal lines (CRT effect) -->
+  <pattern id="scanlines" width="1200" height="4" patternUnits="userSpaceOnUse">
+    <rect width="1200" height="1" fill="rgba(0,0,0,0.15)"/>
+  </pattern>
+  <rect width="1200" height="600" fill="url(#scanlines)"/>
+</svg>
