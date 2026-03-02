@@ -1,8 +1,9 @@
-// Bitcoin HUD - Live network data from mempool.space
+// Bitcoin HUD - Live network data from mempool.space (or custom instance)
 (function () {
   'use strict';
 
-  var API = 'https://mempool.space/api';
+  var hudEl = document.getElementById('hud-stats');
+  var API = (hudEl && hudEl.dataset.api) || 'https://mempool.space/api';
   var UPDATE_INTERVAL = 60000;
   var intervalId = null;
 
