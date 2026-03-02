@@ -16,7 +16,7 @@ layout: default
       </div>
       <a href="{{ post.url | relative_url }}" class="post-title-link">{{ post.title }}</a>
       {% if post.excerpt and site.excerpt %}
-      <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+      <p class="post-excerpt">{{ post.excerpt | strip_html }}</p>
       {% endif %}
     </li>
     {% endfor %}
