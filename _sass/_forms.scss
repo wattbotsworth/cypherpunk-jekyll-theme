@@ -1,0 +1,147 @@
+// Market registration form styles
+.market-intro {
+  font-size: 1.1em;
+  margin-bottom: 2em;
+}
+
+.market-event-info {
+  background: $bg-secondary;
+  padding: 1.5em;
+  margin-bottom: 2em;
+  border-left: 4px solid $accent-orange;
+
+  h3 {
+    margin-top: 0;
+    color: $accent-orange;
+  }
+
+  p {
+    margin-bottom: 0.5em;
+    &:last-child { margin-bottom: 0; }
+  }
+}
+
+.market-form-container {
+  background: $bg-secondary;
+  padding: 1.5em;
+  border: 1px solid $border-green;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.market-form-field {
+  margin-bottom: 1.5em;
+  &:last-of-type { margin-bottom: 2em; }
+}
+
+.market-form-label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  color: $text-primary;
+}
+
+.market-required { color: $accent-orange; }
+.market-optional { color: $text-muted; font-weight: 400; }
+.market-label-note { color: $text-muted; font-weight: 400; font-size: 0.9em; }
+
+.market-input,
+.market-textarea {
+  width: 100%;
+  padding: 0.75em;
+  border: 1px solid $border-green;
+  background: $bg-primary;
+  color: $text-primary;
+  font-family: $font-mono;
+  font-size: 1em;
+  transition: border-color 0.3s;
+
+  &:focus {
+    border-color: $accent-green;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 255, 65, 0.2);
+  }
+}
+
+.market-textarea { resize: vertical; }
+
+.market-payment-group {
+  margin-bottom: 1.5em;
+  padding: 1.25em;
+  background: $bg-secondary;
+  border: 1px solid $border-green;
+}
+
+.market-checkbox-list { display: grid; gap: 0.75em; }
+
+.market-checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5em;
+  transition: background-color 0.2s;
+
+  &:hover { background: rgba(0, 255, 65, 0.05); }
+
+  input[type="checkbox"] {
+    margin-right: 0.75em;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+}
+
+.market-privacy-notice {
+  margin-bottom: 1.5em;
+  padding: 1em;
+  background: $bg-secondary;
+  border-left: 3px solid $accent-orange;
+
+  p { margin: 0; color: $text-muted; font-size: 0.95em; }
+}
+
+.market-submit-btn {
+  background: $accent-orange;
+  color: $bg-primary;
+  padding: 1em 2.5em;
+  border: none;
+  font-family: $font-mono;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s, transform 0.1s;
+
+  &:hover { background: lighten($accent-orange, 5%); }
+  &:active { transform: scale(0.98); }
+}
+
+.market-seal-container {
+  margin-top: 3em;
+  text-align: center;
+  img { max-width: 100%; height: auto; }
+}
+
+// Generic form inputs (for any forms on pages)
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  background: $bg-primary;
+  color: $text-primary;
+  border: 1px solid $border-green;
+  padding: 0.5em;
+  font-family: $font-mono;
+
+  &:focus {
+    border-color: $accent-green;
+    outline: none;
+  }
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: $text-muted;
+}
