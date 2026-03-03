@@ -11,6 +11,7 @@
     block: function () { return document.getElementById('hud-block'); },
     price: function () { return document.getElementById('hud-price'); },
     fees: function () { return document.getElementById('hud-fees'); },
+    source: function () { return document.getElementById('hud-source'); },
     status: function () { return document.getElementById('hud-status'); },
     time: function () { return document.getElementById('hud-time'); }
   };
@@ -98,12 +99,13 @@
     updateTime();
 
     var st = els.status();
-    if (st) {
+    var src = els.source();
+    if (src) {
       try {
         var host = new URL(API).hostname;
-        st.textContent = host + ' connected';
+        src.textContent = '[ ' + host + ' ]';
       } catch (e) {
-        st.textContent = 'connected';
+        src.textContent = '[ LIVE NETWORK DATA ]';
       }
     }
   }

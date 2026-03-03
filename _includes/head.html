@@ -3,7 +3,8 @@
 <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 }}">
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-<style>:root { --terminal-prompt: "{{ site.terminal_prompt | default: '~$ ' }}"; }</style>
+{% assign host = site.url | remove: 'https://' | remove: 'http://' | remove: 'www.' | default: 'localhost' %}
+<style>:root { --terminal-prompt: "root@{{ host }}:~$ "; }</style>
 {% if site.url %}<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">{% endif %}
 {% if site.favicon %}<link rel="icon" href="{{ site.favicon | relative_url }}" type="image/x-icon">{% endif %}
 {% feed_meta %}
