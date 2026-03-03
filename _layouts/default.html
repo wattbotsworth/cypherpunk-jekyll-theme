@@ -3,7 +3,7 @@
 <head>
   {% include head.html %}
 </head>
-<body>
+<body{% unless site.cypherpunk.crt == false %} class="crt-enabled"{% endunless %}>
   <div class="site-wrapper">
     {% include header.html %}
     <main class="content">

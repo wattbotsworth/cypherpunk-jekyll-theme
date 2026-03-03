@@ -1,5 +1,5 @@
 <div class="hero-container">
-  <img src="{{ site.header_feature_image | default: '/assets/img/default-hero.png' | relative_url }}" alt="{{ site.title | default: 'Cypherpunk' }}" class="hero-image">
+  <img src="{{ site.cypherpunk.hero_image | default: site.header_feature_image | default: '/assets/img/default-hero.png' | relative_url }}" alt="{{ site.title | default: 'Cypherpunk' }}" class="hero-image">
 
   <div class="bitcoin-hud-overlay">
     <div class="hud-corner-bracket top-left"></div>
@@ -10,7 +10,7 @@
     <div class="hud-grid-overlay"></div>
     <div class="hud-scan-line"></div>
 
-    <div class="hud-stats-corner" id="hud-stats" data-api="{{ site.mempool_api | default: 'https://mempool.space/api' }}">
+    <div class="hud-stats-corner" id="hud-stats" data-api="{{ site.cypherpunk.mempool_api | default: 'https://mempool.space/api' }}">
       <span class="hud-stats-label" id="hud-source">[ LIVE NETWORK DATA ]</span>
       <div class="hud-stat-row">
         <span class="hud-stat-label">Block</span>
