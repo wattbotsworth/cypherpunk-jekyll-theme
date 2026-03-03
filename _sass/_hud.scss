@@ -219,59 +219,52 @@
 
 @media (max-width: 768px) {
   .hero-container {
-    height: 35vh;
-    min-height: 200px;
-    max-height: 350px;
+    height: 40vh;
+    min-height: 250px;
+    max-height: 400px;
   }
 
-  // Hide decorative elements on mobile
+  // Hide brackets and grid on mobile, keep CRT scan
   .hud-corner-bracket,
-  .hud-grid-overlay,
-  .hud-scan-line {
+  .hud-grid-overlay {
     display: none;
   }
 
   .hud-stats-corner {
     top: auto;
-    bottom: 40px;
-    left: 8px;
+    bottom: 45px;
+    left: 10px;
     right: auto;
     min-width: 0;
-    font-size: 0.75em;
-    padding: 8px 12px;
+    font-size: 0.85em;
+    padding: 10px 14px;
     background: rgba(0, 0, 0, 0.9);
   }
 
   .hud-stats-label {
     font-size: 0.6em;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
 
   .hud-stat-row {
-    padding: 3px 0;
+    padding: 4px 0;
   }
 
   .hud-status-bar {
-    font-size: 0.65em;
-    padding: 4px 8px;
-  }
-
-  .hud-prompt {
-    &::before {
-      content: "$ ";
-    }
+    font-size: 0.75em;
+    padding: 6px 10px;
   }
 }
 
 @media (max-width: 480px) {
   .hero-container {
-    height: 30vh;
-    min-height: 180px;
-    max-height: 250px;
+    height: 35vh;
+    min-height: 220px;
+    max-height: 320px;
   }
 
   .hud-stats-corner {
-    padding: 6px 8px;
-    font-size: 0.7em;
+    padding: 8px 10px;
+    font-size: 0.8em;
   }
 }
