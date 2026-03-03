@@ -224,25 +224,36 @@
     max-height: 350px;
   }
 
+  // Hide decorative elements on mobile
+  .hud-corner-bracket,
+  .hud-grid-overlay,
+  .hud-scan-line {
+    display: none;
+  }
+
   .hud-stats-corner {
     top: auto;
-    bottom: 50px;
-    left: 10px;
-    right: 10px;
+    bottom: 40px;
+    left: 8px;
+    right: auto;
     min-width: 0;
-    font-size: 0.9em;
+    font-size: 0.75em;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  .hud-stats-label {
+    font-size: 0.6em;
+    margin-bottom: 4px;
+  }
+
+  .hud-stat-row {
+    padding: 3px 0;
   }
 
   .hud-status-bar {
-    font-size: 0.7em;
-    padding: 6px 10px;
-    flex-wrap: wrap;
-    gap: 4px;
-  }
-
-  .hud-corner-bracket {
-    width: 16px;
-    height: 16px;
+    font-size: 0.65em;
+    padding: 4px 8px;
   }
 
   .hud-prompt {
@@ -254,15 +265,13 @@
 
 @media (max-width: 480px) {
   .hero-container {
-    height: 45vh;
-    min-height: 250px;
+    height: 30vh;
+    min-height: 180px;
+    max-height: 250px;
   }
 
   .hud-stats-corner {
-    padding: 8px 10px;
-  }
-
-  .hud-stat-row {
-    font-size: 0.8em;
+    padding: 6px 8px;
+    font-size: 0.7em;
   }
 }
