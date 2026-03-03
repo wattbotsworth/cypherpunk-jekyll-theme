@@ -11,7 +11,6 @@
     block: function () { return document.getElementById('hud-block'); },
     price: function () { return document.getElementById('hud-price'); },
     fees: function () { return document.getElementById('hud-fees'); },
-    source: function () { return document.getElementById('hud-source'); },
     status: function () { return document.getElementById('hud-status'); },
     time: function () { return document.getElementById('hud-time'); }
   };
@@ -99,15 +98,7 @@
     updateTime();
 
     var st = els.status();
-    var src = els.source();
-    if (src) {
-      try {
-        var host = new URL(API).hostname;
-        src.textContent = '[ ' + host + ' ]';
-      } catch (e) {
-        src.textContent = '[ LIVE NETWORK DATA ]';
-      }
-    }
+    if (st) st.textContent = 'mempool.space connected';
   }
 
   function init() {

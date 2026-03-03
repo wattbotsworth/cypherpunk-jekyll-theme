@@ -1,5 +1,5 @@
 <div class="hero-container">
-  <img src="{{ site.cypherpunk.hero_image | default: site.header_feature_image | default: '/assets/img/default-hero.png' | relative_url }}" alt="{{ site.title | default: 'Cypherpunk' }}" class="hero-image">
+  <img src="{{ '/assets/img/cypherpunk_mermaid.jpeg' | relative_url }}" alt="757btc Cypherpunk" class="hero-image">
 
   <div class="bitcoin-hud-overlay">
     <div class="hud-corner-bracket top-left"></div>
@@ -10,8 +10,8 @@
     <div class="hud-grid-overlay"></div>
     <div class="hud-scan-line"></div>
 
-    <div class="hud-stats-corner" id="hud-stats" data-api="{{ site.cypherpunk.mempool_api | default: 'https://mempool.space/api' }}">
-      <span class="hud-stats-label" id="hud-source">[ LIVE NETWORK DATA ]</span>
+    <div class="hud-stats-corner" id="hud-stats" data-api="{{ site.mempool_api | default: 'https://mempool.space/api' }}"
+      <span class="hud-stats-label">[ LIVE NETWORK DATA ]</span>
       <div class="hud-stat-row">
         <span class="hud-stat-label">Block</span>
         <span class="hud-stat-value" id="hud-block">---</span>
@@ -27,7 +27,8 @@
     </div>
 
     <div class="hud-status-bar">
-      <span class="hud-prompt" id="hud-status">system online</span>
+      <label class="hud-prompt-label" for="hud-input">root@757btc:~$</label>
+      <input type="text" id="hud-input" class="hud-prompt-input" placeholder="system online" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
       <span class="hud-timestamp" id="hud-time"></span>
     </div>
   </div>

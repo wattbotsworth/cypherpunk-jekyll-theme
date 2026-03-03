@@ -2,9 +2,9 @@
 .hero-container {
   position: relative;
   width: 100%;
-  height: 45vh;
-  max-height: 450px;
-  min-height: 250px;
+  height: 70vh;
+  max-height: 700px;
+  min-height: 400px;
   overflow: hidden;
   margin: 0;
   padding: 0;
@@ -14,7 +14,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: var(--hero-position, center top);
+  object-position: center;
   display: block;
 }
 
@@ -198,10 +198,34 @@
   }
 }
 
-.hud-prompt {
-  &::before {
-    content: var(--terminal-prompt, "~$ ");
-    color: $accent-green;
+.hud-prompt-label {
+  color: $accent-green;
+  font-size: 1em;
+  white-space: nowrap;
+  margin-right: 6px;
+  cursor: text;
+}
+
+.hud-prompt-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: $accent-green;
+  font-family: $font-mono;
+  font-size: 1em;
+  caret-color: $accent-green;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+
+  &::placeholder {
+    color: $accent-green-dim;
+    opacity: 0.6;
+  }
+
+  &:focus::placeholder {
+    opacity: 0.3;
   }
 }
 
@@ -213,58 +237,58 @@
 // Responsive
 @media (min-width: 1200px) {
   .hero-container {
-    max-height: 500px;
+    max-height: 800px;
   }
 }
 
 @media (max-width: 768px) {
   .hero-container {
-    height: 40vh;
-    min-height: 250px;
-    max-height: 400px;
-  }
-
-  // Hide brackets and grid on mobile, keep CRT scan
-  .hud-corner-bracket,
-  .hud-grid-overlay {
-    display: none;
+    height: 50vh;
+    min-height: 300px;
+    max-height: 500px;
   }
 
   .hud-stats-corner {
     top: auto;
-    bottom: 45px;
+    bottom: 50px;
     left: 10px;
-    right: auto;
+    right: 10px;
     min-width: 0;
-    font-size: 0.85em;
-    padding: 10px 14px;
-    background: rgba(0, 0, 0, 0.9);
-  }
-
-  .hud-stats-label {
-    font-size: 0.6em;
-    margin-bottom: 6px;
-  }
-
-  .hud-stat-row {
-    padding: 4px 0;
+    font-size: 0.9em;
   }
 
   .hud-status-bar {
-    font-size: 0.75em;
+    font-size: 0.7em;
     padding: 6px 10px;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .hud-corner-bracket {
+    width: 16px;
+    height: 16px;
+  }
+
+  .hud-prompt-label {
+    font-size: 0.9em;
+  }
+
+  .hud-prompt-input {
+    font-size: 16px; // prevent iOS zoom
   }
 }
 
 @media (max-width: 480px) {
   .hero-container {
-    height: 35vh;
-    min-height: 220px;
-    max-height: 320px;
+    height: 45vh;
+    min-height: 250px;
   }
 
   .hud-stats-corner {
     padding: 8px 10px;
+  }
+
+  .hud-stat-row {
     font-size: 0.8em;
   }
 }

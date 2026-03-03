@@ -16,7 +16,7 @@ layout: default
       </div>
       <a href="{{ post.url | relative_url }}" class="post-title-link">{{ post.title }}</a>
       {% if post.excerpt and site.excerpt %}
-      <p class="post-excerpt">{{ post.excerpt | strip_html }}</p>
+      <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
       {% endif %}
     </li>
     {% endfor %}
@@ -36,3 +36,5 @@ layout: default
 </div>
 
 <script src="{{ '/assets/js/bitcoin-hud.js' | relative_url }}"></script>
+<link rel="stylesheet" href="{{ '/assets/css/terminal.css' | relative_url }}">
+<script src="{{ '/assets/js/terminal.js' | relative_url }}"></script>
