@@ -72,11 +72,30 @@ description: >-
   Your site description
 excerpt: true           # Show excerpts on home page
 post_navigation: true   # Show prev/next on posts
+
+# Hero image (defaults to theme's generic cypherpunk image if not set)
+header_feature_image: /assets/img/your-hero.jpeg
+
+# Favicon
+favicon: /favicon.ico
+
+# Bitcoin HUD — mempool.space API endpoint
+# Defaults to the public mempool.space instance.
+# Point this at your own mempool instance if you run one.
+mempool_api: https://mempool.space/api
 ```
 
-## Hero Image
+## Bitcoin HUD
 
-Place your hero image at `assets/img/cypherpunk_mermaid.jpeg` or override in `_includes/hud.html`.
+The homepage hero includes a live Bitcoin network data overlay showing block height, price, and fee rates. Data is fetched client-side from the [mempool.space API](https://mempool.space/docs/api) every 60 seconds.
+
+To use your own mempool instance, set `mempool_api` in `_config.yml`:
+
+```yaml
+mempool_api: https://your-mempool-instance.com/api
+```
+
+If the API is unreachable, the HUD gracefully degrades to `---` placeholders.
 
 ## License
 
