@@ -17,7 +17,7 @@
   margin-bottom: 0.5em;
 
   &::before {
-    content: "root@757btc:~$ ";
+    content: var(--terminal-prompt, "~$ ");
     color: $accent-green;
   }
 }

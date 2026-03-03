@@ -98,7 +98,14 @@
     updateTime();
 
     var st = els.status();
-    if (st) st.textContent = 'mempool.space connected';
+    if (st) {
+      try {
+        var host = new URL(API).hostname;
+        st.textContent = host + ' connected';
+      } catch (e) {
+        st.textContent = 'connected';
+      }
+    }
   }
 
   function init() {
