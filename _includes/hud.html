@@ -1,5 +1,6 @@
 <div class="hero-container">
-  <img src="{{ '/assets/img/cypherpunk_mermaid.jpeg' | relative_url }}" alt="757btc Cypherpunk" class="hero-image">
+  {% assign hero_img = site.hero_image | default: '/assets/img/cypherpunk_mermaid.jpeg' %}
+  <img src="{{ hero_img | relative_url }}" alt="{{ site.title | default: 'Cypherpunk' }}" class="hero-image">
 
   <div class="bitcoin-hud-overlay">
     <div class="hud-corner-bracket top-left"></div>
