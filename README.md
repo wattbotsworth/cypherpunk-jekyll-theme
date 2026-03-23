@@ -76,9 +76,10 @@ favicon: /favicon.ico
 
 # Theme-specific options
 cypherpunk:
-  hero_image: /assets/img/your-hero.jpeg   # defaults to generic cypherpunk image
+  hero_image: /assets/img/your-hero.png    # defaults to /assets/img/default-hero.png
   hero_position: center top                 # CSS object-position for hero scaling
   mempool_api: https://mempool.space/api    # Bitcoin HUD data source
+  prompt: "root@yoursite:~$"                # Terminal prompt text (defaults to "root@cypherpunk:~$")
   crt: true                                 # CRT scan line effect (true/false)
 ```
 

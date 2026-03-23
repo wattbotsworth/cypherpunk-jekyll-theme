@@ -1,5 +1,5 @@
 <div class="hero-container">
-  {% assign hero_img = site.cypherpunk.hero_image | default: '/assets/img/cypherpunk_mermaid.png' %}
+  {% assign hero_img = site.cypherpunk.hero_image | default: '/assets/img/default-hero.png' %}
   <img src="{{ hero_img | relative_url }}" alt="{{ site.title | default: 'Cypherpunk' }}" class="hero-image">
 
   <div class="bitcoin-hud-overlay">
@@ -28,7 +28,7 @@
     </div>
 
     <div class="hud-status-bar">
-      <label class="hud-prompt-label" for="hud-input">root@757btc:~$</label>
+      <label class="hud-prompt-label" for="hud-input">{{ site.cypherpunk.prompt | default: 'root@cypherpunk:~$' }}</label>
       <input type="text" id="hud-input" class="hud-prompt-input" placeholder="system online" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
       <span class="hud-timestamp" id="hud-time"></span>
     </div>
